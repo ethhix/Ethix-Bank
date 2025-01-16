@@ -7,11 +7,14 @@ private Random rand = new Random();
 BankDatabaseConnector bankDatabaseConnector = new BankDatabaseConnector();
 
 createAccountPageController createAccountPageController = new createAccountPageController();
+BankApplicationController bankApplicationController = new BankApplicationController();
 
-private long accountNumber = 0;
+private long accountNumber;
+private String fullName;
+private double balance;
+private String accountType;
 
-    public BankAccount(createAccountPageController createAccountPageController) {
-        this.createAccountPageController = createAccountPageController;
+    public BankAccount() {
     }
 
     public void main(String[] args) {
@@ -29,6 +32,38 @@ private long accountNumber = 0;
         return createAccountPageController.getFirstName() + " " + createAccountPageController.getLastName();
     }
 
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public void setAccountType(String accountType) {
+        this.accountType = accountType;
+    }
+
+    public void setAccountNumber(long accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
     public String retrieveAccountType() {
         return createAccountPageController.getAccountType();
     }
@@ -43,5 +78,12 @@ private long accountNumber = 0;
 
     public long retrieveAccountNumber() {
         return accountNumber;
+    }
+
+    public void clearUserDetails() {
+        fullName = null;
+        accountNumber = 0;
+        balance = 0.0;
+        accountType = null;
     }
 }

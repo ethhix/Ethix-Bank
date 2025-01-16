@@ -5,10 +5,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 public class Main extends Application {
-	
+
 	@Override
 	public void start(Stage stage) {
-		
+
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("loginPage.fxml"));
 			Scene scene = new Scene(root);
@@ -16,12 +16,11 @@ public class Main extends Application {
 			stage.setScene(scene);
 			stage.show();
 			stage.setResizable(false);
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static void main(String[] args) {
 		launch(args);
 	}

@@ -1,9 +1,17 @@
 public class Customer {
-    
+
     private createAccountPageController createAccountPageController;
 
     public Customer(createAccountPageController createAccountPageController) {
         this.createAccountPageController = createAccountPageController;
+    }
+
+    public String retriveUserName() {
+        return createAccountPageController.getUserName();
+    }
+
+    public String retrievePassword() {
+        return createAccountPageController.getPassword();
     }
 
     public String retrieveFullName() {
@@ -29,6 +37,8 @@ public class Customer {
     }
 
     public boolean isValid() {
-        return !retrieveFullName().isEmpty() && !retrieveAddress().isEmpty() && !retrieveEmail().isEmpty() && !retrievePhone().isEmpty();
+        return !retrieveFullName().isEmpty() && !retrieveAddress().isEmpty() && !retrieveEmail().isEmpty()
+                && !retrievePhone().isEmpty()
+                && !retriveUserName().isEmpty() && !retrievePassword().isEmpty();
     }
 }

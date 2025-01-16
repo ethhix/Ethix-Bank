@@ -1,3 +1,241 @@
 .root {
-    -fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #edf2ec 0%, #edf2ec	 100%);
+  -fx-background-color: linear-gradient(
+    from 0% 0% to 0% 100%,
+    #edf2ec 0%,
+    #edf2ec 100%
+  );
+}
+
+.bar-weak {
+  -fx-accent: #ff0000;
+}
+
+.bar-medium {
+  -fx-accent: #ff8000;
+}
+
+.bar-strong {
+  -fx-accent: #00ff00;
+}
+
+.checkingAccountBox {
+  -fx-background-color: linear-gradient(to bottom right, #66bb6a, #1b521e);
+  -fx-padding: 20px;
+  -fx-spacing: 10px;
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px;
+  -fx-border-color: #134615;
+  -fx-border-width: 2px;
+  -fx-alignment: center-left;
+}
+
+.checkingAccountBox .label {
+  -fx-font-size: 18px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.checkingAccountBox .balanceLabel {
+  -fx-font-size: 30px;
+  -fx-text-fill: #e8f5e9;
+  -fx-font-weight: bold;
+}
+
+.text-field {
+  -fx-padding: 8px;
+  -fx-border-insets: 2px;
+  -fx-background-insets: 2px;
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-border-color: #4caf50;
+  -fx-background-color: white;
+}
+
+.text-field:focused {
+  -fx-border-color: #66bb6a;
+}
+
+#loginButton {
+  -fx-background-color: #4caf50;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+  -fx-border-radius: 4px;
+  -fx-background-radius: 4px;
+  -fx-padding: 10px 20px;
+}
+
+#loginButton:hover {
+  -fx-background-color: #51a156;
+}
+
+#accountTypeLabel {
+  text-align: center;
+}
+
+.accountHeaders {
+  -fx-background-color: #e0f2f1;
+  -fx-padding: 15px;
+  -fx-border-color: #00796b;
+  -fx-border-width: 0 0 2px 0;
+  -fx-border-radius: 0px;
+  -fx-background-radius: 0px;
+  -fx-alignment: center-left;
+}
+
+.accountHeaders .label {
+  -fx-font-size: 24px;
+  -fx-text-fill: #020202;
+}
+
+.accountHeaders .myAccountsLabel {
+  -fx-text-fill: #000000;
+}
+
+.accountHeaders .accountSummaryLabel {
+  -fx-text-fill: #000000;
+}
+
+.addTransactionButton {
+  -fx-background-color: linear-gradient(to bottom right, #4caf50, #388e3c);
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-border-radius: 3px;
+  -fx-background-radius: 5px;
+  -fx-border-color: #2e7d32;
+  -fx-border-width: 2px;
+}
+
+.addTransactionButton:hover {
+  -fx-background-color: linear-gradient(to bottom right, #66bb6a, #43a047);
+}
+
+.addTransactionButton:pressed {
+  -fx-background-color: linear-gradient(to bottom right, #388e3c, #2e7d32);
+}
+
+.savingAccountBox {
+  -fx-background-color: linear-gradient(to bottom right, #66bb6a, #43a047);
+  -fx-padding: 20px;
+  -fx-spacing: 10px;
+  -fx-border-radius: 15px;
+  -fx-background-radius: 15px;
+  -fx-border-color: #134615;
+  -fx-border-width: 2px;
+  -fx-alignment: center-left;
+}
+
+.savingAccountBox .label {
+  -fx-font-size: 18px;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.savingAccountBox .balanceLabel {
+  -fx-font-size: 36px;
+  -fx-text-fill: #e8f5e9;
+  -fx-font-weight: bold;
+}
+
+.incomeContainer {
+  -fx-background-color: #e0f7fa;
+  -fx-padding: 15px;
+  -fx-border-color: #00acc1;
+  -fx-border-width: 2px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-alignment: center-left;
+}
+
+.expensesContainer {
+  -fx-background-color: #ffebee;
+  -fx-padding: 15px;
+  -fx-border-color: #e53935;
+  -fx-border-width: 2px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-alignment: center-left;
+}
+
+.incomeContainer .label {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #00796b;
+}
+
+.expensesContainer .label {
+  -fx-font-size: 24px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #c62828;
+}
+
+.moneyActionsHeader {
+  -fx-background-color: #e0f2f1;
+  -fx-padding: 15px;
+  -fx-border-color: #00796b;
+  -fx-border-width: 0 0 2px 0;
+  -fx-border-radius: 0px;
+  -fx-background-radius: 0px;
+  -fx-alignment: center-left;
+  -fx-spacing: 400px;
+}
+
+.moneyActionsHeader .spacer {
+  -fx-pref-width: 100%;
+}
+
+.moneyActionsHeader .label {
+  -fx-font-size: 24px;
+  -fx-text-fill: #020202;
+}
+
+.moneyActionsHeader .recentTransactionsLabel {
+  -fx-text-fill: #000000;
+}
+
+.moneyActionsHeader .sendMoneyLabel {
+  -fx-text-fill: #000000;
+}
+
+.sendMoneyContainer {
+  -fx-background-color: #f9f9f9;
+  -fx-padding: 20px;
+  -fx-spacing: 15px;
+  -fx-border-radius: 10px;
+  -fx-background-radius: 10px;
+  -fx-border-color: #c0c0c0;
+  -fx-border-width: 2px;
+}
+
+.sendMoneyContainer .label {
+  -fx-font-size: 18px;
+  -fx-text-fill: #000000;
+}
+
+.sendMoneyContainer .text-field {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #b0b0b0;
+  -fx-border-radius: 5px;
+  -fx-padding: 5px;
+  -fx-font-size: 14px;
+  -fx-min-height: 30px;
+  -fx-border-width: 1px;
+}
+
+.sendMoneyContainer .button {
+  -fx-background-color: linear-gradient(to bottom right, #4caf50, #388e3c);
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-padding: 10px 20px;
+  -fx-border-radius: 5px;
+  -fx-background-radius: 5px;
+  -fx-border-color: #2e7d32;
+  -fx-border-width: 2px;
+}
+
+.sendMoneyContainer .button:hover {
+  -fx-background-color: linear-gradient(to bottom right, #66bb6a, #43a047);
+}
+
+.sendMoneyContainer .button:pressed {
+  -fx-background-color: linear-gradient(to bottom right, #388e3c, #2e7d32);
 }
